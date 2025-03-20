@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Storm Trooper Feedback Form</title>
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <div id="error-overlay">
+      <img id="error-gif" src="images/bazinga-young-sheldon.gif" alt="Error Animation">
+      <div id="error-text">ERROR! Please fix the form and try again!</div>
+   </div>
+
+   <div id="success-overlay" style="display: none;">
+      <img id="success-gif" src="images/dog-jumping-dog-jumping.gif" alt="Success Animation">
+      <div id="success-text">Thanks for your feedback!</div>
+   </div>
+
+   <img id="spinning-womm" src="images/womm.webp" alt="Spinning WOMM">
+   
+   <h1>Storm Trooper Feedback Form</h1>
+   
+   <form id="feedbackForm" novalidate>
+       <label for="name">Name:</label>
+       <input type="text" id="name" required>
+       
+       <label for="age">Age:</label>
+       <input type="number" id="age" min="18" required>
+       
+       <label for="phone">Phone:</label>
+       <input type="tel" id="phone" placeholder="xxx-xxx-xxxx" required>
+       
+       <label for="street">Street:</label>
+       <input type="text" id="street" required>
+       
+       <label for="city">City:</label>
+       <input type="text" id="city" required>
+       
+       <label for="state">State:</label>
+       <input type="text" id="state" list="stateList" required>
+       <datalist id="stateList"></datalist>
+       
+       <label for="zip">Zip Code:</label>
+       <input type="text" id="zip" maxlength="5" pattern="[0-9]{5}" required>
+       
+       <label for="email">Email:</label>
+       <input type="email" id="email" required>
+       
+       <label for="message">Feedback Message:</label>
+       <textarea id="message" required></textarea>
+       
+       <div id="error-container"></div>
+       
+       <button type="submit">Submit Feedback</button>
+   </form>
+
+   <script src="script.js"></script>
+</body>
+</html> 
